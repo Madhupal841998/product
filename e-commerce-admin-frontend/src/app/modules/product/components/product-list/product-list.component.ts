@@ -61,4 +61,8 @@ export class ProductListComponent implements OnInit {
     const start = (this.currentPage - 1) * this.itemsPerPage;
     return this.products.slice(start, start + this.itemsPerPage);
   }
+
+  get totalPages(): number {
+    return Math.ceil(this.products.length / this.itemsPerPage);
+  }
 }

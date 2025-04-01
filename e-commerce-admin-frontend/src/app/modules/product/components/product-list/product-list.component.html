@@ -69,10 +69,10 @@
           <li class="page-item" [class.disabled]="currentPage === 1">
             <a class="page-link" (click)="changePage(currentPage - 1)">&laquo; Prev</a>
           </li>
-          <li class="page-item" *ngFor="let page of [].constructor(Math.ceil(products.length / itemsPerPage)); let i = index" [class.active]="currentPage === i + 1">
+          <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index" [class.active]="currentPage === i + 1">
             <a class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</a>
           </li>
-          <li class="page-item" [class.disabled]="currentPage === Math.ceil(products.length / itemsPerPage)">
+          <li class="page-item" [class.disabled]="currentPage === totalPages">
             <a class="page-link" (click)="changePage(currentPage + 1)">Next &raquo;</a>
           </li>
         </ul>
