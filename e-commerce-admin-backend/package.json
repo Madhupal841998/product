@@ -16,6 +16,9 @@
     "typescript",
     "postgresql"
   ],
+  "engines": {
+    "node": "^10.13.0 || ^12.11.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
